@@ -46,5 +46,9 @@ Contributions are welcome! If you’d like to improve a lab, fix a script, or ad
 ### Connect With Me 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue "LinkedIn")](https://www.linkedin.com/in/zacharythomasallen/) - [![GitHub](https://img.shields.io/badge/GitHub-Profile-black "GitHub")](https://github.com/zacha0dev)
 
-_Last updated: October 2025_  </br>
-_Version: 1.0 (Initial Release)_
+</br>
+
+---
+
+**Version:** 1.0  
+**Last Updated:** October, 2025
