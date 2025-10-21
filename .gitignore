@@ -161,3 +161,9 @@ site-packages/
 # If you produce temporary scratch data:
 tmp/
 temp/
+
+
+# my-azure-api runtime
+custom-services/my-azure-api/app/.heartbeat
+custom-services/my-azure-api/config/app.json
+custom-services/my-azure-api/.

@@ -1,0 +1,12 @@
+{
+  "first-time-setup": true,
+  "configured": false,
+  "api": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "heartbeat": {
+    "path": "app/.heartbeat",
+    "interval_sec": 1
+  }
+}
