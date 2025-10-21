@@ -14,5 +14,11 @@ This project is broken out into modular sections.
 
 ---
 
-_Created by: Zachary Allen_ </br>
-_Last Updated: October 2025_
+### Contributions
+Feel free to fork this repo or open issues, but direct pushes are restricted.
+
+### Connect With Me 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue "LinkedIn")](https://www.linkedin.com/in/zacharythomasallen/) - [![GitHub](https://img.shields.io/badge/GitHub-Profile-black "GitHub")](https://github.com/zacha0dev)
+
+_Last updated: October 2025_  </br>
+_Version: 1.0 (Initial Release)_
