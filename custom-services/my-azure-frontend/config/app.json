@@ -1,0 +1,32 @@
+{
+  "first-time-setup": true,
+  "configured": false,
+  "frontend": {
+    "host": "127.0.0.1",
+    "port": 8501,
+    "theme": "light",
+    "debug": false
+  },
+  "integrations": {
+    "router": {
+      "heartbeat_path": "../my-azure-router/router/.heartbeat"
+    },
+    "api": {
+      "health_url": "http://127.0.0.1:8000/healthz",
+      "routes_url": "http://127.0.0.1:8000/routes"
+    }
+  },
+  "auth": {
+    "secret_key": "change-me-dev-only",
+    "users": [
+      {
+        "username": "admin",
+        "password": "admin"
+      }
+    ]
+  },
+  "heartbeat": {
+    "path": "app/.heartbeat",
+    "interval_sec": 1
+  }
+}

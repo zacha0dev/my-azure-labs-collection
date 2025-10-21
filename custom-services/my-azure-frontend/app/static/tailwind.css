@@ -1,0 +1,9 @@
+/* Optional custom overrides for Tailwind */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Example: tweak nav background */
+nav {
+  background-color: #4f46e5; /* Indigo-600 */
+}

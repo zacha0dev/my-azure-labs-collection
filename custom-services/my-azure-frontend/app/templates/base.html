@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "My Azure Frontend" }}</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-indigo-600 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-semibold">My Azure Labs – Frontend</div>
+      <div class="space-x-4">
+        <a href="{{ url_for('dashboard') }}">dashboard</a>
+        <a href="{{ url_for('routes') }}">routes</a>
+        <a href="{{ url_for('logout') }}">logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="max-w-3xl mx-auto mt-4 space-y-2">
+        {% for category, message in messages %}
+          <div class="px-4 py-2 rounded">
+            {{ 'bg-green-100 text-green-900' if category=='success' else 'bg-red-100 text-red-900' }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto p-6">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>System Dashboard</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-indigo-600 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-semibold">My Azure Labs – Frontend</div>
+      <div class="space-x-4">
+        <a href="{{ url_for('dashboard') }}">dashboard</a>
+        <a href="{{ url_for('routes') }}">routes</a>
+        <a href="{{ url_for('logout') }}">logout</a>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-2xl font-semibold mb-6">System Dashboard</h1>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Router Status -->
+      <div class="bg-white shadow rounded p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="text-xl font-semibold">My Azure Router</h2>
+          <span class="px-2 py-1 text-sm rounded bg-green-100 text-green-800">
+            OK
+          </span>
+        </div>
+        <pre class="text-sm bg-gray-50 p-3 rounded overflow-auto">
+{
+  "status": "ok",
+  "version": "0.1.0",
+  "ts": 1697823456.12
+}
+        </pre>
+      </div>
+
+      <!-- API Status -->
+      <div class="bg-white shadow rounded p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="text-xl font-semibold">My Azure API</h2>
+          <span class="px-2 py-1 text-sm rounded bg-red-100 text-red-800">
+            DOWN
+          </span>
+        </div>
+        <pre class="text-sm bg-gray-50 p-3 rounded overflow-auto">
+{
+  "status": "down",
+  "error": "Connection refused"
+}
+        </pre>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

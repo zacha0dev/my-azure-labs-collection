@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-2xl font-semibold mb-6">Route Management</h1>
+
+<div class="grid md:grid-cols-2 gap-6">
+  <!-- Form Section -->
+  <div class="bg-white shadow rounded p-5">
+    <h2 class="text-lg font-semibold mb-3">Add / Update Route</h2>
+    <form method="post" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Destination (CIDR)</label>
+        <input type="text" name="destination" placeholder="10.1.2.0/24"
+               class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Next Hop</label>
+        <input type="text" name="next_hop" placeholder="10.0.0.4"
+               class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Metric</label>
+        <input type="number" name="metric" min="0" value="0"
+               class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      </div>
+      <button type="submit"
+              class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- Last Submission Result -->
+  <div class="bg-white shadow rounded p-5">
+    <h2 class="text-lg font-semibold mb-3">Last Submission Result</h2>
+    {% if result %}
+      <pre class="text-sm bg-gray-50 p-3 rounded overflow-auto">{{ result|tojson(indent=2) }}</pre>
+    {% else %}
+      <p class="text-sm text-gray-600">No submission yet.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

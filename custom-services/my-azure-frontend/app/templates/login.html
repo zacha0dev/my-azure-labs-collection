@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - My Azure Frontend</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-full bg-gray-50 flex items-center justify-center">
+  <div class="max-w-md w-full bg-white shadow rounded p-6">
+    <h1 class="text-xl font-semibold mb-4 text-center">Sign in</h1>
+    <form method="post" class="space-y-4">
+      <!-- Username -->
+      <div>
+        <label class="block text-sm font-medium mb-1">Username</label>
+        <input type="text" name="username" placeholder="Enter username"
+               class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+      </div>
+      <!-- Password -->
+      <div>
+        <label class="block text-sm font-medium mb-1">Password</label>
+        <input type="password" name="password" placeholder="Enter password"
+               class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+      </div>
+      <!-- Submit -->
+      <button type="submit"
+              class="w-full bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        Login
+      </button>
+    </form>
+    <!-- Links -->
+    <p class="text-center text-sm text-gray-500 mt-4">
+      Don't have an account? <a class="text-center text-sm text-gray-500 mt-2" href="{{ url_for('register') }}">register</a>
+      Forgot your password? <a href="#">Reset</a>
+    </p>
+  </div>
+</body>
+</html>
