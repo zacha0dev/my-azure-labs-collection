@@ -1,0 +1,12 @@
+{
+  "first-time-setup": true,
+  "configured": false,
+  "router": {
+    "host": "127.0.0.1",
+    "port": 5000,
+    "routing_table": {
+      "10.0.0.0/24": "eth0",
+      "10.1.0.0/24": "eth1"
+    }
+  }
+}
